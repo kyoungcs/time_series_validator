@@ -10,7 +10,9 @@ def csv_col_is_numeric(filename, col=1, skiprows=1):
             except:
                 return line.strip()
 
+
 def csv_col_duplicates(filename, col=1, skiprows=1):
+    # This is used to fin dupicate dates in our data file
     with open(filename) as f:
         existing_values = []
         for line in f.readlines()[skiprows:]:
