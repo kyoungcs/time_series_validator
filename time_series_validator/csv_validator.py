@@ -1,6 +1,7 @@
 import pandas as pd
 
 def csv_col_is_numeric(filename, col=1, skiprows=1):
+    # verifies a csv column is numerical by casting to float and returning the line on error
     with open(filename) as f:
         for line in f.readlines()[skiprows:]:
             vals = line.strip().split(',')
